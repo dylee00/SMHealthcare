@@ -34,7 +34,16 @@ void loadDiets(const char* DIETFILEPATH) {
     }
 
      // ToCode: to read a list of the diets from the given file
-    while () {
+     // EOF까지 diets.txt 읽기
+    while (!feof(file)) {
+        
+        fscanf(file,"%50s %d",
+            diet_list[diet_list_size].food_name,&diet_list[diet_list_size].calories_intake);
+
+        printf("%-50s %-d\n",
+        diet_list[diet_list_size].food_name,&diet_list[diet_list_size].calories_intake);
+
+        diet_list_size++;
     	
         if (diet_list_size >= MAX_DIETS){
         	break;
