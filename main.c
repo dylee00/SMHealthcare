@@ -32,7 +32,7 @@ int main() {
     calories_burned = health_data.total_calories_burned;
     calories = health_data.total_calories_intake;
 
-    remain_calories = DAILY_CALORIE_GOAL + calories - calories_burned - BASAL_METABOLIC_RATE;
+    remain_calories = DAILY_CALORIE_GOAL - (calories - (BASAL_METABOLIC_RATE + calories_burned));
 
 
     // ToCode: to run the "Healthcare Management Systems" until all calories are used up or the user wants to exit the system
@@ -57,19 +57,20 @@ int main() {
 		// ToCode: to run the sysmtem based on the user's choice
         switch (choice) {
             case 1:
-            	
+            	inputExercise(&health_data);
                 break;
                 
             case 2:
-            	
+            	inputDiet(&health_data);
                 break;
                 
             case 3:
-            	
+            	printHealthData(&health_data);
                 break;
                 
             case 4:
             	
+                saveData(HEALTHFILEPATH, &health_data);
     			printf("Exit the system.\n");
     			printf("=======================================================================\n");
                 break;

@@ -1,0 +1,19 @@
+[Exercises] 
+walking - 120 kcal
+riding - 150 kcal
+pilates - 120 kcal
+yoga - 60 kcal
+Total calories burned: 450 kcal
+
+[Diets] 
+rice - 600 kcal
+bread - 680 kcal
+chicken - 925 kcal
+salad - 70 kcal
+pizza - 900 kcal
+tteokbokki - 615 kcal
+Total calories intake: 3790 kcal
+
+[Total] 
+Basal Metabolic rate - 1300 kcal
+The remaining calories - -40 kcal

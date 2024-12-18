@@ -41,7 +41,7 @@ void loadDiets(const char* DIETFILEPATH) {
             diet_list[diet_list_size].food_name,&diet_list[diet_list_size].calories_intake);
 
         printf("%-50s %-5d\n",
-        diet_list[diet_list_size].food_name,&diet_list[diet_list_size].calories_intake);
+        diet_list[diet_list_size].food_name,diet_list[diet_list_size].calories_intake);
 
         diet_list_size++;
     	
