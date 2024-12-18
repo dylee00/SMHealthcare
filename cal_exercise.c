@@ -94,8 +94,9 @@ void inputExercise(HealthData* health_data) {
             //입력한 운동의 소모 칼로리 계산
             calories_burned = exercise_list[choice - 1].calories_burned_per_minute * duration;
 
-            //입력한 운동 정보를 exercises 배열에 저장
+            //입력한 운동 정보와 소모 칼로리를 exercises 배열에 저장
             health_data->exercises[health_data->exercise_count] = exercise_list[choice - 1];
+            health_data->exercises[health_data->exercise_count].calories_burned_per_minute = calories_burned;
 
             //누적 운동 개수 업데이트
             health_data->exercise_count++;

@@ -24,12 +24,23 @@ int main() {
     HealthData health_data = {0};
     
     // Tocode: to read the list of the exercises and diets
-    
+    loadExercises(EXERCISEFILEPATH);    
+    loadDiets(DIETFILEPATH);
+
+    int remain_calories, calories_burned, calories;
+
+    calories_burned = health_data.total_calories_burned;
+    calories = health_data.total_calories_intake;
+
+    remain_calories = DAILY_CALORIE_GOAL + calories - calories_burned - BASAL_METABOLIC_RATE;
+
 
     // ToCode: to run the "Healthcare Management Systems" until all calories are used up or the user wants to exit the system
     do {
-    	if ( ){
+    	if (remain_calories == 0){
             printf("You have consumed all your calories for today! \n");
+            //health_data.txt 저장 로직 필요
+            break;
 		} 
 		else{
 			printf("\n=======================================================================\n");
@@ -67,7 +78,7 @@ int main() {
                 printf("[Error] Invalid option. \n");
                 printf("Please try again! \n");
         }
-    } while ( );
+    } while (choice != 4);
 
     return 0;
 }
