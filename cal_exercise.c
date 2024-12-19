@@ -69,11 +69,11 @@ void loadExercises(const char* EXERCISEFILEPATH) {
 //health_data 구조체에 저장
 void inputExercise(HealthData* health_data) {
     int choice, duration, calories_burned;
-    
+    int i;
     // ToCode: to provide the options for the exercises to be selected
     // database에 저장된 운동 list 출력
     printf("The list of exercises: \n");
-    for(int i=0;i<exercise_list_size;i++){
+    for(i=0;i<exercise_list_size;i++){
             printf("%d %-50s %d\n",i+1, exercise_list[i].exercise_name, exercise_list[i].calories_burned_per_minute);
         }
 

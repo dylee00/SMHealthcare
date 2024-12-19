@@ -79,12 +79,13 @@ void saveData(const char* HEALTHFILEPATH, const HealthData* health_data) {
 
 void printHealthData(const HealthData* health_data) {
 	int calories_burned, calories,remain_calories;
+    int i,k;
 	
 	// ToCode: to print out the saved history of exercises
     // health_data 구조체에 저장된 운동 이름, 소모 칼로리 출력
 	printf("=========================== History of Exercise =======================\n");
 
-    for(int i=0;i<health_data->exercise_count;i++){
+    for(i=0;i<health_data->exercise_count;i++){
         printf("Exercise: %s , Calories burned: %d kcal\n",
         health_data->exercises[i].exercise_name,health_data->exercises[i].calories_burned_per_minute);      
     }
@@ -95,9 +96,9 @@ void printHealthData(const HealthData* health_data) {
     // health_data 구조체에 저장된 음식 이름, 섭취 칼로리 출력
     printf("============================= History of Diet =========================\n");
 
-    for(int i=0;i<health_data->diet_count;i++){
+    for(k=0;i<health_data->diet_count;i++){
         printf("Food: %s , Calories intake: %d kcal\n",
-        health_data->diet[i].food_name,health_data->diet[i].calories_intake);
+        health_data->diet[k].food_name,health_data->diet[k].calories_intake);
     }
 
     printf("=======================================================================\n");

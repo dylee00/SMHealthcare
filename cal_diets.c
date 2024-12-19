@@ -63,11 +63,12 @@ void loadDiets(const char* DIETFILEPATH) {
 
 void inputDiet(HealthData* health_data) {
     int choice, calories;
+    int i;
     
     // ToCode: to provide the options for the diets to be selected
     // database에 저장된 운동 list 출력
     printf("The list of diets:\n");
-    for(int i=0;i<diet_list_size;i++){
+    for(i=0;i<diet_list_size;i++){
         printf("%d %-50s %d\n",i+1, diet_list[i].food_name, diet_list[i].calories_intake);
     }    
     
